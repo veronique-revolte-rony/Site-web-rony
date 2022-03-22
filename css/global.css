@@ -12,7 +12,7 @@ html {
 
 body {
   font-family: "Overpass", sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #4d4d4d;
   margin: 0px;
   padding: 0px;
@@ -26,51 +26,52 @@ body {
 }
 
 .logo__vero {
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   filter: drop-shadow(#000 2px 1px 10px);
 }
 
-.header .header__item_left {
-  height: 100px;
+.header .header__item_left { 
+  width:150px;
+  height: 150px;
 }
 
-.header .header__item_center {
+.header{
   font-family: "Julee", cursive;
+  margin: 0px 0px;
   letter-spacing: 3rem;
   font-size: 4rem;
   color: #fff;
   font-style: italic;
   text-shadow: #000 4px 2px 10px;
+  
 }
 
-.socials {
-  display: flex;
-  align-items: center;
-  margin-left: 2rem;
-  padding: 0 0.5rem;
+.header .titre{
+  margin: 0px 0px;
 }
 
-/*----Fin de section HEADER ----*/
-
-/*------ BARRE DE NAVIGATION: NAV_BAR ------*/
 .container_1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: row-reverse;
   max-width: 1200px;
-  height: 120px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
+  height: 190px;
+  padding: 2rem;
+  margin: 0px auto;
   background-image: url(/img/banière.png);
   background-size: cover;
   background-repeat: no-repeat;
   box-sizing: border-box;
 }
+/*----Fin de section HEADER ----*/
+
+
+/*------ BARRE DE NAVIGATION: NAV_BAR ------*/
 
 nav {
   max-width: 1200px;
-  margin: 0 auto;
   border-top: 2px solid #2a2420;
   border-bottom: 2px solid #2a2420;
 }
@@ -98,25 +99,16 @@ nav > ul > li:hover a {
 .nav_bar {
   font-family: "Yrsa", serif;
   font-weight: bolder;
+  margin: 0 auto;
 }
 
 .list-unstyled {
   list-style: none;
 }
-
 /*------ FIN DE NAV_BAR -------*/
 
-@media screen and (min-width: 750px) {
-  .container_1 {
-    margin: 0 auto;
-    padding: 2rem;
-  }
-  .container {
-    margin: 0 auto;
-    padding: 2rem;
-  }
-}
 
+/*----------CORPS DE LA PAGE WEB----------*/
 .section-title {
   font-family: "Yrsa", serif;
   font-size: 4rem;
@@ -129,20 +121,21 @@ nav > ul > li:hover a {
   color: #000;
 }
 
-.about .container {
+.container {
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: 0px auto;
   text-align: justify;
-  line-height: 3rem;
+  line-height: 2rem;
 }
 
-/* .galerie .container {
-  text-align: justify;
-} */
-
-.galerie_tableaux{
+.container_tableaux{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
   justify-items: center;
+  max-width: 1200px;
+  margin: 0px auto;
 }
 
 figure {
@@ -172,3 +165,63 @@ p {
   margin-block-start: 0.3em;
 }
 
+/*-------DEBUT DU MEDIA SCREEN---------*/
+@media screen and (max-width: 750px) {
+  .container_1 {
+    height: 140px;
+    margin: 0 auto;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+  }
+  .container {
+    border: 1px solid;
+    
+  }
+
+  p{
+    font-family: "Yrsa", serif;
+    font-size: 1.7rem;
+    line-height: 1.5rem;
+  }
+
+  .header{
+    height: 140px;
+    margin: 5px 5px 0px;
+  }
+
+  ul{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo__vero{
+    width: 75px;
+    height: 75px;
+  }
+
+  .header .header__item_center {
+    width: auto;
+    font-family: "Julee", cursive;
+    letter-spacing: 1.5rem;
+    font-size: 2rem;
+    color: #fff;
+    font-style: italic;
+    text-shadow: #000 4px 2px 10px;
+  }
+
+  .header .header__item_left { 
+    width: 75px;
+    height: 75px;
+  }
+  nav > ul > li > a{
+    padding: 5px 0px;
+  }
+
+  .nav_bar{
+    margin: 0px 5px;
+  }
+}
+/*------FIN DU MEDIA SCREEN-------------*/
